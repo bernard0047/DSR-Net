@@ -12,7 +12,7 @@ import itertools
 parser = argparse.ArgumentParser()
 
 parser.add_argument("--resume", default="../weights/dsr.pth", type=str, help="path to model")
-parser.add_argument("--data_path", default="../dataset/real_test_data", type=str, help="path to data")
+parser.add_argument("--data_path", default="../dataset/sim_test_data", type=str, help="path to data")
 parser.add_argument("--test_type", type=str, default="motion_visible", choices=["motion_visible", "motion_full", "mask_ordered", "mask_unordered"])
 
 parser.add_argument("--gpu", type=int, default=0, help="gpu id (single gpu)")
