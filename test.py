@@ -11,7 +11,7 @@ import itertools
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument("--resume", default="../weights/single.pth", type=str, help="path to model")
+parser.add_argument("--resume", default="../weights/dsr.pth", type=str, help="path to model")
 parser.add_argument("--data_path", default="../dataset/real_test_data", type=str, help="path to data")
 parser.add_argument("--test_type", type=str, default="motion_visible", choices=["motion_visible", "motion_full", "mask_ordered", "mask_unordered"])
 
@@ -21,7 +21,7 @@ parser.add_argument("--seq_len", type=int, default=10, help="sequence length")
 parser.add_argument("--batch", type=int, default=12, help="batch size")
 parser.add_argument("--workers", type=int, default=2, help="number of workers in data loader")
 
-parser.add_argument("--model_type", type=str, default="single", choices=["dsr", "single", "nowarp", "gtwarp", "3dflow"])
+parser.add_argument("--model_type", type=str, default="dsr", choices=["dsr", "single", "nowarp", "gtwarp", "3dflow"])
 parser.add_argument("--transform_type", type=str, default="se3euler", choices=["affine", "se3euler", "se3aa", "se3spquat", "se3quat"])
 
 
